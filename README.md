@@ -30,3 +30,9 @@ To change the evironment
 
 1- go the MarioPage under src > test > java > page > marioPage
 2- change the value of the @DefaultUrl attribute to your desired mario environment
+
+Firefox version
+- you need to download version 2.40.0 https://ftp.mozilla.org/pub/firefox/releases/27.0/mac/en-GB/Firefox%2027.0.dmg
+- after downloading and installing firefox, you will need to allow to run at the first time by going to
+mac Prefrences > Security & Privicy > General > then click the button Open/allow Firefox in the left bottom side
+- then stop firefox update from firefox prefrences > advanced > update > then click 'Never check for update'
