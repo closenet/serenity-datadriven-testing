@@ -9,9 +9,6 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import page.marioTdmPage;
-/**
- * Created by mal89 on 14/02/2018.
- */
 
 @RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom(value="src/test/resources/testDataTDM.csv")
