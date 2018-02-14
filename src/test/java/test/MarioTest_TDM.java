@@ -1,6 +1,7 @@
 package test;
 
 import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
+import net.thucydides.core.annotations.Title;
 import net.thucydides.junit.annotations.UseTestDataFrom;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -43,7 +44,9 @@ public class MarioTest_TDM
         this.fibre = fibre;
     }
 
+
     @Test
+    @Title("Prime TDM")
     public void openMario () throws Exception {
 
         marioPage.open();
