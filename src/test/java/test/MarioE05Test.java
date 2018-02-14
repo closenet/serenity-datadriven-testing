@@ -12,14 +12,9 @@ import org.openqa.selenium.WebDriver;
 
 import page.marioE05Page;
 
-
-/**
- * Created by mal89 on 03/03/2017.
- */
-
-//@RunWith(SerenityRunner.class)
 @RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom(value="src/test/resources/testData.csv")
+
 public class marioE05Test {
 
     @Managed(driver = "chrome", uniqueSession = true)
