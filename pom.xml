@@ -15,34 +15,10 @@
         <artifactId>serenity-core</artifactId>
         <version>1.1.38</version>
     </dependency>
-    <!--<dependency>-->
-    <!--<groupId>net.serenity-bdd</groupId>-->
-    <!--<artifactId>serenity-cucumber</artifactId>-->
-    <!--<version>1.1.9</version>-->
-    <!--<scope>test</scope>-->
-    <!--</dependency>-->
-    <dependency>
-        <groupId>net.serenity-bdd</groupId>
-        <artifactId>serenity-junit</artifactId>
-        <version>1.1.42</version>
-    </dependency>
-
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-nop</artifactId>
         <version>1.7.21</version>
-    </dependency>
-    <dependency>
-        <groupId>net.serenity-bdd</groupId>
-        <artifactId>serenity-junit</artifactId>
-        <version>1.1.42</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>net.serenity-bdd</groupId>
-        <artifactId>serenity-junit</artifactId>
-        <version>1.1.42</version>
-        <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>net.serenity-bdd</groupId>

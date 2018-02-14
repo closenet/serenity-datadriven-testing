@@ -9,7 +9,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import page.MarioPage_TDM;
+
+import page.marioE05Page;
 
 
 /**
@@ -18,15 +19,14 @@ import page.MarioPage_TDM;
 
 //@RunWith(SerenityRunner.class)
 @RunWith(SerenityParameterizedRunner.class)
-@UseTestDataFrom(value="src/test/resources/testData_TDM.csv")
-public class MarioTest_TDM
-{
+@UseTestDataFrom(value="src/test/resources/testData.csv")
+public class marioE05Test {
 
     @Managed(driver = "chrome", uniqueSession = true)
     public WebDriver driver;
 
     @Steps
-    MarioPage_TDM marioPage;
+    marioE05Page marioPage;
 
 
     private String dnNum;
@@ -35,7 +35,7 @@ public class MarioTest_TDM
     private String urban;
     private String fibre;
 
-    public void assignTestData (String dn, String uan, String connect, String urban, String fibre)  throws Exception //
+    public void assignTestData (String dn, String uan, String connect, String urban, String fibre)  throws Exception
     {
         this.dnNum = dn;
         this.uanNum = uan;
@@ -46,16 +46,20 @@ public class MarioTest_TDM
 
 
     @Test
-    @Title("Prime TDM")
+    @Title("Prime E05")
     public void openMario () throws Exception {
-
         marioPage.open();
-        marioPage.clickCollapseDnUan();
-        marioPage.inputUan(uanNum);
-        marioPage.inputDn(dnNum);
-        marioPage.clickShowSenarios();
-        marioPage.clickAvailableScenarios();
-        Thread.sleep(30000);
+        marioPage.inputDnItem(dnNum);
+        marioPage.inputUanItem(uanNum);
+        Thread.sleep(2000);
+        marioPage.clickRequiredBroadband(connect, urban, fibre);
+        Thread.sleep(2000);
+        marioPage.clickSubmit();
+        Thread.sleep(2000);
+        System.out.println("END of Priming for DN: " + this.dnNum + " AND UAN: " + this.uanNum);
+
+        //   System.exit(0);
+
 
     }
 

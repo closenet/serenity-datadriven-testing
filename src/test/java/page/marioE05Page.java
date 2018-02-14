@@ -9,7 +9,7 @@ package page;
 
 
 @DefaultUrl("http://mariopdv.sns.sky.com/mario/availability")
-public class MarioPage extends PageObject {
+public class marioE05Page extends PageObject {
 
     @FindBy(id = "directoryNumber")
     private WebElementFacade DnLocator;
