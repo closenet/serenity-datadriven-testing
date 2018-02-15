@@ -8,26 +8,51 @@
     <artifactId>sky.priming</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <serenity.version>1.8.21</serenity.version>
+        <serenity.maven.version>1.8.21</serenity.maven.version>
+        <webdriver.driver>chrome</webdriver.driver>
+    </properties>
 
 <dependencies>
     <dependency>
         <groupId>net.serenity-bdd</groupId>
         <artifactId>serenity-core</artifactId>
-        <version>1.1.38</version>
-    </dependency>
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-nop</artifactId>
-        <version>1.7.21</version>
+        <version>1.8.21</version>
     </dependency>
     <dependency>
         <groupId>net.serenity-bdd</groupId>
         <artifactId>serenity-junit</artifactId>
-        <version>1.1.42</version>
+        <version>1.8.21</version>
         <scope>test</scope>
     </dependency>
 </dependencies>
 
+ <build>
+<plugins>
+    <plugin>
+        <groupId>net.serenity-bdd.maven.plugins</groupId>
+        <artifactId>serenity-maven-plugin</artifactId>
+        <version>${serenity.maven.version}</version>
+        <dependencies>
+            <dependency>
+                <groupId>net.serenity-bdd</groupId>
+                <artifactId>serenity-core</artifactId>
+                <version>${serenity.version}</version>
+            </dependency>
+        </dependencies>
+        <executions>
+            <execution>
+                <id>serenity-reports</id>
+                <phase>post-integration-test</phase>
+                <goals>
+                    <goal>aggregate</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
 
-
+</plugins>
+ </build>
 </project>
