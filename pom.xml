@@ -13,6 +13,7 @@
         <serenity.version>1.8.21</serenity.version>
         <serenity.maven.version>1.8.21</serenity.maven.version>
         <webdriver.driver>chrome</webdriver.driver>
+        <webdriver.timeouts.implicitlywai>20000</webdriver.timeouts.implicitlywai>
     </properties>
 
 <dependencies>
