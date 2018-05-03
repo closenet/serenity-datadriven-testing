@@ -47,7 +47,8 @@ public class marioTdmTest {
             marioPage.inputDn(dnNum);
             marioPage.clickShowSenarios();
             marioPage.clickAvailableScenarios();
-
+            marioPage.clickRunScenario();
+            Thread.sleep(1000);
         }
 
 }

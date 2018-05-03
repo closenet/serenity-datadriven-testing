@@ -33,8 +33,6 @@ public class marioE05Page extends PageObject {
     public void inputUanItem(String UAN)
     {
         UanLocator.type(UAN);
-
-
     }
 
     //locate the DN
@@ -54,14 +52,11 @@ public class marioE05Page extends PageObject {
 
         if (fibre.equals("x"))
             fibreRadioBtn.click();
-
     }
-
 
     public void clickSubmit() {
         SubmitBtn.click();
     }
-
 
 }
 

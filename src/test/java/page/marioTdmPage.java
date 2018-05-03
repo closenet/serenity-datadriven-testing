@@ -42,6 +42,9 @@ public class marioTdmPage extends PageObject {
         @FindBy(css="#selectScenarioSelect")
         private WebElementFacade availableScenario;
 
+         @FindBy(css=".btn-block")
+        private WebElementFacade runScenario;
+
         // the eircode
         public void inputEircode(String eircode)
         {
@@ -90,5 +93,10 @@ public class marioTdmPage extends PageObject {
             availableScenario.selectByIndex(2);
         }
 
+
+        public  void clickRunScenario()
+        {
+            runScenario.click();
+        }
 
 }
